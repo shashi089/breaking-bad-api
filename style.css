@@ -1,0 +1,100 @@
+body {
+  background-color: #d1c1c1;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #1b595a;
+  text-shadow: 3px 3px 5px #1b595a;
+}
+
+#list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#list button {
+  height: 35px;
+  width: 100px;
+  border: none;
+  background-color: #1b595a;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+#list button:hover {
+  background-color: #3dc0c2;
+  color: #fff;
+}
+.output {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.character-info {
+  background-color: #1b595a;
+  color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.display-info {
+  padding: 0 30px;
+}
+.character-info img {
+  height: 290px;
+  width: 290px;
+}
+.episode-info,
+.death-info {
+  height: 300px;
+  width: 250px;
+  background-color: #1b595a;
+  border-radius: 20px;
+}
+.episode-info h3 {
+  text-align: center;
+  color: #d5d5d5;
+  font-weight: 900;
+}
+.episode-info p,
+.quote-info p,
+.death-info p {
+  font-size: 0.85rem;
+  margin-left: 15px;
+  color: #d5d5d5;
+}
+.death-info h3 {
+  padding: 15px 5px;
+}
+
+.quote-info {
+  height: 200px;
+  width: 250px;
+  background-color: #1b595a;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.quote-info h5 {
+  color: #d5d5d5;
+}
+.quote-info p {
+  border: 1px solid black;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.death-info h3 {
+  text-align: center;
+  color: #d5d5d5;
+}
