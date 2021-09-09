@@ -74,7 +74,7 @@ h2 {
 }
 
 .quote-info {
-  height: 200px;
+  height: 210px;
   width: 250px;
   background-color: #1b595a;
   text-align: center;
@@ -84,7 +84,7 @@ h2 {
   flex-direction: column;
   border-radius: 20px;
 }
-.quote-info h5 {
+.quote-info h4 {
   color: #d5d5d5;
 }
 .quote-info p {

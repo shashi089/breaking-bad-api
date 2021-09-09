@@ -78,7 +78,7 @@ async function fetchQuotes() {
 function createQuotes(quote) {
   let outputString = document.createElement("div");
   outputString.setAttribute("class", "quote-info");
-  outputString.innerHTML = `<h5>${quote.quote}</h5>
+  outputString.innerHTML = `<h4>${quote.quote}</h4>
             <p>Author:${quote.author} </p>`;
   let output = document.querySelector(".output");
   output.appendChild(outputString);
