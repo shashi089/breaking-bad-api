@@ -1,18 +1,19 @@
 let characters = document.querySelector("#characters");
-characters.addEventListener("click", fetchCharacters);
+characters.addEventListener("click", fetchCharacters); // Calls fectch Characters function
 
 let episodes = document.querySelector("#episodes");
-episodes.addEventListener("click", fetchEpisodes);
+episodes.addEventListener("click", fetchEpisodes); // Calls fectch Episodes function
 
 let quotes = document.querySelector("#quotes");
-quotes.addEventListener("click", fetchQuotes);
+quotes.addEventListener("click", fetchQuotes); // Calls fectch Quotes function
 
 let deaths = document.querySelector("#deaths");
-deaths.addEventListener("click", fetchDeaths);
+deaths.addEventListener("click", fetchDeaths); // Calls fectch Deaths function
 
+// Function to fetch Characters using API
 async function fetchCharacters() {
   let output = document.querySelector(".output");
-  output.innerHTML = "";
+  output.innerHTML = ""; // Clears the contents of output class
   let outputTitle = document.querySelector("#outputtitle");
   outputTitle.innerText = "Characters";
 
@@ -21,6 +22,7 @@ async function fetchCharacters() {
   results.map((character) => createCharacters(character));
 }
 
+// fumction to create characters list
 function createCharacters(character) {
   let outputString = document.createElement("div");
   outputString.setAttribute("class", "character-info");
@@ -37,15 +39,17 @@ function createCharacters(character) {
   console.log(output);
 }
 
+// Function to fetch Episodes using API
 async function fetchEpisodes() {
   let output = document.querySelector(".output");
-  output.innerHTML = "";
+  output.innerHTML = ""; //--Clears the contents of output class
   let outputTitle = document.querySelector("#outputtitle");
   outputTitle.innerText = "Episodes";
   let res = await fetch(`https://www.breakingbadapi.com/api/episodes`);
   let results = await res.json();
   results.map((episode) => createEpisodes(episode));
 }
+// fumction to create Episodes list
 function createEpisodes(episode) {
   let outputString = document.createElement("div");
   outputString.setAttribute("class", "episode-info");
@@ -59,15 +63,18 @@ function createEpisodes(episode) {
   output.appendChild(outputString);
 }
 
+// Function to fetch Quotes using API
 async function fetchQuotes() {
   let output = document.querySelector(".output");
-  output.innerHTML = "";
+  output.innerHTML = ""; // Clears the contents of output class
   let outputTitle = document.querySelector("#outputtitle");
   outputTitle.innerText = "Quotes";
   let res = await fetch(`https://breakingbadapi.com/api/quotes`);
   let results = await res.json();
   results.map((quote) => createQuotes(quote));
 }
+
+// fumction to create Quotes list
 function createQuotes(quote) {
   let outputString = document.createElement("div");
   outputString.setAttribute("class", "quote-info");
@@ -77,9 +84,10 @@ function createQuotes(quote) {
   output.appendChild(outputString);
 }
 
+// Function to fetch Deaths using API
 async function fetchDeaths() {
   let output = document.querySelector(".output");
-  output.innerHTML = "";
+  output.innerHTML = ""; // Clears the contents of output class
   let outputTitle = document.querySelector("#outputtitle");
   outputTitle.innerText = "Deaths";
   let res = await fetch(`https://breakingbadapi.com/api/deaths`);
@@ -87,6 +95,7 @@ async function fetchDeaths() {
   results.map((deaths) => createDeathlist(deaths));
 }
 
+// fumction to create Deaths list
 function createDeathlist(deaths) {
   let outputString = document.createElement("div");
   outputString.setAttribute("class", "death-info");
