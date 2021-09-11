@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 body {
   background-color: #d1c1c1;
+  font-family: "Roboto", sans-serif;
 }
 
 h1,
@@ -52,6 +55,13 @@ h2 {
   width: 100%;
   height: 290px;
 }
+
+.character-info span,
+.episode-info span,
+.quote-info span,
+.death-info span {
+  font-weight: 900;
+}
 .episode-info,
 .death-info {
   height: 300px;
@@ -64,12 +74,17 @@ h2 {
   color: #d5d5d5;
   font-weight: 900;
 }
+.character-info p,
 .episode-info p,
 .quote-info p,
 .death-info p {
   font-size: 0.85rem;
-  margin-left: 15px;
   color: #d5d5d5;
+}
+
+.episode-info p,
+.death-info p {
+  margin-left: 15px;
 }
 .death-info h3 {
   padding: 15px 5px;

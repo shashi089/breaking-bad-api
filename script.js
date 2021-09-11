@@ -28,11 +28,11 @@ function createCharacters(character) {
   outputString.setAttribute("class", "character-info");
   outputString.innerHTML = `<img src="${character.img}"">
         <div class= display-info>
-        <h5>Name:${character.portrayed}</h5>
-        <h6>Actor Name:${character.name} </h6>
-        <h6>Nick Name:${character.nickname}</h6>
-        <h6>DOB:${character.birthday}</h6>
-        <h6>Status:${character.status}</h6>
+        <h4><span> Name :</span> ${character.portrayed}</h4>
+        <p><span>Actor Name :</span> ${character.name} </p>
+        <p><span>Nick Name :</span> ${character.nickname}</p>
+        <p><span>DOB :</span> ${character.birthday}</p>
+        <p><span>Status :</span> ${character.status}</p>
         </div>`;
   let output = document.querySelector(".output");
   output.appendChild(outputString);
@@ -55,10 +55,10 @@ function createEpisodes(episode) {
   outputString.setAttribute("class", "episode-info");
   outputString.innerHTML = `<h3>${episode.title}</h3>
            <hr>
-          <p>Season:${episode.season} </p>
-          <p>Release Date:${episode.air_date}</p>
-          <p>Episode:${episode.episode}</p>
-          <p>Characters: ${episode.characters}</p>`;
+          <p><span>Season :</span> ${episode.season} </p>
+          <p><span>Release Date :</span> ${episode.air_date}</p>
+          <p><span>Episode :</span> ${episode.episode}</p>
+          <p><span>Characters :</span> ${episode.characters}</p>`;
   let output = document.querySelector(".output");
   output.appendChild(outputString);
 }
@@ -79,7 +79,7 @@ function createQuotes(quote) {
   let outputString = document.createElement("div");
   outputString.setAttribute("class", "quote-info");
   outputString.innerHTML = `<h4>${quote.quote}</h4>
-            <p>Author:${quote.author} </p>`;
+            <p><span>Author :</span> ${quote.author} </p>`;
   let output = document.querySelector(".output");
   output.appendChild(outputString);
 }
@@ -101,9 +101,9 @@ function createDeathlist(deaths) {
   outputString.setAttribute("class", "death-info");
   outputString.innerHTML = `<h3>${deaths.death}</h3>
                <hr>
-              <p>Cause:${deaths.cause}</p>
-              <p>Responsible:${deaths.responsible} </p>
-              <p>Last Words:${deaths.last_words} </p>`;
+              <p><span>Cause :</span> ${deaths.cause}</p>
+              <p><span>Responsible :</span> ${deaths.responsible} </p>
+              <p><span>Last Words :</span> ${deaths.last_words} </p>`;
   let output = document.querySelector(".output");
   output.appendChild(outputString);
 }
